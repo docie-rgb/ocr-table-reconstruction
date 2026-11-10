@@ -1,0 +1,71 @@
+{
+  "image": "data/input/census_table1.png",
+  "output_dir": "outputs/ocr",
+  "manual_checks_file": "review/manual_checks.json",
+  "source": {
+    "title": "Table 1 — AREA. Gross area (land and water) in square miles / Population: 1910",
+    "description": "미국 인구조사국(U.S. Bureau of the Census), 1910 인구조사 보고서(1913년 발행) Volume I, PDF 2쪽(인쇄 22쪽)의 Table 1. AI 교육 선택 과제 B에서 제공된 이미지를 크롭·재압축 없이 사용",
+    "provided_by": "AI 교육 과정 선택 과제 B 자료",
+    "original_publication": {
+      "publisher": "U.S. Bureau of the Census (미국 인구조사국)",
+      "title": "1910 인구조사 보고서 (PDF 경로상 Volume 1)",
+      "published": "1913",
+      "pdf_url": "https://www2.census.gov/library/publications/decennial/1910/volume-1/volume-1-p3.pdf",
+      "pdf_page": 2,
+      "printed_page": 22,
+      "citation_basis": "과제 안내문에 기재된 출처 정보. 이 PDF를 직접 내려받아 이미지와 대조하지는 않음"
+    },
+    "sha256": "dc52541e10267298cf5a7d8c3b83a39c5b7034f90e848bbc6e851f2f161f9016"
+  },
+  "ocr": {
+    "lang": "en",
+    "device": "cpu",
+    "enable_mkldnn": false,
+    "text_rec_score_thresh": 0.0
+  },
+  "table": {
+    "title_pattern": "^Table\\s+\\d+",
+    "low_score_threshold": 0.9,
+    "rule_detection": {
+      "min_frac": 0.25,
+      "merge_px": 8,
+      "border_px": 12
+    },
+    "columns": [
+      {
+        "key": "area",
+        "type": "label"
+      },
+      {
+        "key": "gross_area_sq_mi",
+        "type": "int"
+      },
+      {
+        "key": "population_1910",
+        "type": "int"
+      }
+    ]
+  },
+  "sum_checks": [
+    {
+      "total": "United States, with outlying possessions",
+      "parts": [
+        "United States, exclusive of outlying possessions",
+        "Outlying possessions"
+      ]
+    },
+    {
+      "total": "Outlying possessions",
+      "parts": [
+        "Alaska",
+        "Hawaii",
+        "Porto Rico",
+        "Military and naval service abroad",
+        "Philippine Islands",
+        "Panama Canal Zone",
+        "Guam (population estimated)",
+        "Samoa (population estimated)"
+      ]
+    }
+  ]
+}

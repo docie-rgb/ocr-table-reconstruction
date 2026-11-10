@@ -1,0 +1,173 @@
+{
+  "generated_at_utc": "2026-11-10T12:51:48+00:00",
+  "command": "python scripts/run_pipeline.py --config configs/census_table1.json",
+  "source_image": {
+    "title": "Table 1 — AREA. Gross area (land and water) in square miles / Population: 1910",
+    "description": "미국 인구조사국(U.S. Bureau of the Census), 1910 인구조사 보고서(1913년 발행) Volume I, PDF 2쪽(인쇄 22쪽)의 Table 1. AI 교육 선택 과제 B에서 제공된 이미지를 크롭·재압축 없이 사용",
+    "provided_by": "AI 교육 과정 선택 과제 B 자료",
+    "original_publication": {
+      "publisher": "U.S. Bureau of the Census (미국 인구조사국)",
+      "title": "1910 인구조사 보고서 (PDF 경로상 Volume 1)",
+      "published": "1913",
+      "pdf_url": "https://www2.census.gov/library/publications/decennial/1910/volume-1/volume-1-p3.pdf",
+      "pdf_page": 2,
+      "printed_page": 22,
+      "citation_basis": "과제 안내문에 기재된 출처 정보. 이 PDF를 직접 내려받아 이미지와 대조하지는 않음"
+    },
+    "sha256": "dc52541e10267298cf5a7d8c3b83a39c5b7034f90e848bbc6e851f2f161f9016",
+    "repo_path": "data/input/census_table1.png",
+    "copied_to": "outputs/ocr/input_census_table1.png",
+    "sha256_actual": "dc52541e10267298cf5a7d8c3b83a39c5b7034f90e848bbc6e851f2f161f9016",
+    "width": 1050,
+    "height": 505
+  },
+  "ocr": {
+    "engine": "PaddleOCR (local inference, no external OCR API)",
+    "settings": {
+      "lang": "en",
+      "device": "cpu",
+      "use_doc_orientation_classify": false,
+      "use_doc_unwarping": false,
+      "use_textline_orientation": false,
+      "enable_mkldnn": false,
+      "text_rec_score_thresh": 0.0,
+      "text_det_model": "PP-OCRv6_medium_det",
+      "text_rec_model": "PP-OCRv6_medium_rec",
+      "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+      },
+      "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_textline_orientation": false
+      }
+    },
+    "models_cache_dir": "~\\.paddlex\\official_models",
+    "models_downloaded_from": "PaddleOCR official model hosters on first run (weights only)",
+    "num_text_items": 41,
+    "timing_sec": {
+      "model_load": 4.53,
+      "inference": 22.14
+    }
+  },
+  "table": {
+    "config": {
+      "title_pattern": "^Table\\s+\\d+",
+      "low_score_threshold": 0.9,
+      "rule_detection": {
+        "min_frac": 0.25,
+        "merge_px": 8,
+        "border_px": 12
+      },
+      "columns": [
+        {
+          "key": "area",
+          "type": "label"
+        },
+        {
+          "key": "gross_area_sq_mi",
+          "type": "int"
+        },
+        {
+          "key": "population_1910",
+          "type": "int"
+        }
+      ]
+    },
+    "sum_checks": [
+      {
+        "total": "United States, with outlying possessions",
+        "parts": [
+          "United States, exclusive of outlying possessions",
+          "Outlying possessions"
+        ]
+      },
+      {
+        "total": "Outlying possessions",
+        "parts": [
+          "Alaska",
+          "Hawaii",
+          "Porto Rico",
+          "Military and naval service abroad",
+          "Philippine Islands",
+          "Panama Canal Zone",
+          "Guam (population estimated)",
+          "Samoa (population estimated)"
+        ]
+      }
+    ],
+    "rows": 11,
+    "columns": [
+      "area",
+      "gross_area_sq_mi",
+      "population_1910"
+    ]
+  },
+  "environment": {
+    "python": "3.11.9",
+    "implementation": "CPython",
+    "os": "Windows-10-10.0.19045-SP0",
+    "machine": "AMD64",
+    "processor": "Intel64 Family 6 Model 158 Stepping 13, GenuineIntel",
+    "cpu_count": 16,
+    "device_used": "cpu",
+    "packages": {
+      "paddleocr": "3.7.0",
+      "paddlepaddle": "3.3.1",
+      "paddlex": "3.7.2",
+      "opencv-contrib-python": "4.10.0.84",
+      "numpy": "2.3.5",
+      "Pillow": "13.0.0"
+    }
+  },
+  "outputs": [
+    "cell_review.csv",
+    "corrections.json",
+    "crops/r01_area.png",
+    "crops/r01_gross_area_sq_mi.png",
+    "crops/r01_population_1910.png",
+    "crops/r02_area.png",
+    "crops/r02_gross_area_sq_mi.png",
+    "crops/r02_population_1910.png",
+    "crops/r03_area.png",
+    "crops/r03_gross_area_sq_mi.png",
+    "crops/r03_population_1910.png",
+    "crops/r04_area.png",
+    "crops/r04_gross_area_sq_mi.png",
+    "crops/r04_population_1910.png",
+    "crops/r05_area.png",
+    "crops/r05_gross_area_sq_mi.png",
+    "crops/r05_population_1910.png",
+    "crops/r06_area.png",
+    "crops/r06_gross_area_sq_mi.png",
+    "crops/r06_population_1910.png",
+    "crops/r07_area.png",
+    "crops/r07_gross_area_sq_mi.png",
+    "crops/r07_population_1910.png",
+    "crops/r08_area.png",
+    "crops/r08_gross_area_sq_mi.png",
+    "crops/r08_population_1910.png",
+    "crops/r09_area.png",
+    "crops/r09_gross_area_sq_mi.png",
+    "crops/r09_population_1910.png",
+    "crops/r10_area.png",
+    "crops/r10_gross_area_sq_mi.png",
+    "crops/r10_population_1910.png",
+    "crops/r11_area.png",
+    "crops/r11_gross_area_sq_mi.png",
+    "crops/r11_population_1910.png",
+    "document.md",
+    "input_census_table1.png",
+    "layout.json",
+    "ocr_boxes.png",
+    "ocr_text_overlay.png",
+    "raw_ocr.json",
+    "review_log.md",
+    "table.csv",
+    "manifest.json"
+  ]
+}

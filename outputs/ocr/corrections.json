@@ -1,0 +1,575 @@
+{
+  "changes": [
+    {
+      "row_no": 1,
+      "column": "population_1910",
+      "kind": "normalization",
+      "ocr_raw": "101, 115, 487",
+      "new_value": "101,115,487",
+      "reason": "whitespace removed inside number",
+      "bbox": [
+        909,
+        118,
+        1033,
+        144
+      ]
+    },
+    {
+      "row_no": 2,
+      "column": "area",
+      "kind": "normalization",
+      "ocr_raw": "United States, exclusive of outlying possessions.",
+      "new_value": "United States, exclusive of outlying possessions",
+      "reason": "trailing dot-leader removed",
+      "bbox": [
+        28,
+        163,
+        543,
+        186
+      ]
+    },
+    {
+      "row_no": 2,
+      "column": "population_1910",
+      "kind": "normalization",
+      "ocr_raw": "91, 972,266",
+      "new_value": "91,972,266",
+      "reason": "whitespace removed inside number",
+      "bbox": [
+        922,
+        163,
+        1034,
+        187
+      ]
+    },
+    {
+      "row_no": 3,
+      "column": "area",
+      "kind": "normalization",
+      "ocr_raw": "Outlying possessions.",
+      "new_value": "Outlying possessions",
+      "reason": "trailing dot-leader removed",
+      "bbox": [
+        27,
+        208,
+        246,
+        232
+      ]
+    },
+    {
+      "row_no": 4,
+      "column": "area",
+      "kind": "normalization",
+      "ocr_raw": "Alaska.",
+      "new_value": "Alaska",
+      "reason": "trailing dot-leader removed",
+      "bbox": [
+        69,
+        251,
+        149,
+        275
+      ]
+    },
+    {
+      "row_no": 5,
+      "column": "area",
+      "kind": "normalization",
+      "ocr_raw": "Hawaii.",
+      "new_value": "Hawaii",
+      "reason": "trailing dot-leader removed",
+      "bbox": [
+        68,
+        273,
+        152,
+        298
+      ]
+    },
+    {
+      "row_no": 6,
+      "column": "area",
+      "kind": "normalization",
+      "ocr_raw": "Porto Rico.",
+      "new_value": "Porto Rico",
+      "reason": "trailing dot-leader removed",
+      "bbox": [
+        69,
+        296,
+        189,
+        320
+      ]
+    },
+    {
+      "row_no": 8,
+      "column": "area",
+      "kind": "normalization",
+      "ocr_raw": "Philippine Islands.",
+      "new_value": "Philippine Islands",
+      "reason": "trailing dot-leader removed",
+      "bbox": [
+        69,
+        340,
+        274,
+        365
+      ]
+    },
+    {
+      "row_no": 8,
+      "column": "population_1910",
+      "kind": "correction",
+      "ocr_raw": "17,635,426",
+      "new_value": "7,635,426",
+      "footnote": "1",
+      "reason": "Leading digit is a superscript footnote marker fused into the number by OCR (glyph geometry below); the marker matches footnote '1' printed under the table.",
+      "evidence": {
+        "glyph_geometry": {
+          "is_superscript": true,
+          "first_glyph_bbox_in_box": [
+            3,
+            5,
+            5,
+            10
+          ],
+          "first_glyph_bottom": 15,
+          "baseline": 22.0,
+          "digit_height": 17.0,
+          "raised_px": 7.0,
+          "rule": "raised >= 0.25*digit_height and height <= 0.85*digit_height"
+        }
+      },
+      "bbox": [
+        921,
+        340,
+        1035,
+        365
+      ]
+    },
+    {
+      "row_no": 9,
+      "column": "population_1910",
+      "kind": "correction",
+      "ocr_raw": "262,810",
+      "new_value": "62,810",
+      "footnote": "2",
+      "reason": "Leading digit is a superscript footnote marker fused into the number by OCR (glyph geometry below); the marker matches footnote '2' printed under the table.",
+      "evidence": {
+        "glyph_geometry": {
+          "is_superscript": true,
+          "first_glyph_bbox_in_box": [
+            4,
+            4,
+            7,
+            11
+          ],
+          "first_glyph_bottom": 15,
+          "baseline": 21.0,
+          "digit_height": 16.0,
+          "raised_px": 6.0,
+          "rule": "raised >= 0.25*digit_height and height <= 0.85*digit_height"
+        }
+      },
+      "bbox": [
+        952,
+        363,
+        1035,
+        388
+      ]
+    }
+  ],
+  "sum_checks": [
+    {
+      "total": "United States, with outlying possessions",
+      "parts": [
+        "United States, exclusive of outlying possessions",
+        "Outlying possessions"
+      ],
+      "column": "gross_area_sq_mi",
+      "result": "pass",
+      "expected_total": 3743306,
+      "sum_of_parts": 3743306,
+      "difference": 0,
+      "blank_parts": []
+    },
+    {
+      "total": "United States, with outlying possessions",
+      "parts": [
+        "United States, exclusive of outlying possessions",
+        "Outlying possessions"
+      ],
+      "column": "population_1910",
+      "result": "pass",
+      "expected_total": 101115487,
+      "sum_of_parts": 101115487,
+      "difference": 0,
+      "blank_parts": []
+    },
+    {
+      "total": "Outlying possessions",
+      "parts": [
+        "Alaska",
+        "Hawaii",
+        "Porto Rico",
+        "Military and naval service abroad",
+        "Philippine Islands",
+        "Panama Canal Zone",
+        "Guam (population estimated)",
+        "Samoa (population estimated)"
+      ],
+      "column": "gross_area_sq_mi",
+      "result": "pass",
+      "expected_total": 716517,
+      "sum_of_parts": 716517,
+      "difference": 0,
+      "blank_parts": [
+        "Military and naval service abroad"
+      ]
+    },
+    {
+      "total": "Outlying possessions",
+      "parts": [
+        "Alaska",
+        "Hawaii",
+        "Porto Rico",
+        "Military and naval service abroad",
+        "Philippine Islands",
+        "Panama Canal Zone",
+        "Guam (population estimated)",
+        "Samoa (population estimated)"
+      ],
+      "column": "population_1910",
+      "result": "pass",
+      "expected_total": 9143221,
+      "sum_of_parts": 9143221,
+      "difference": 0,
+      "blank_parts": []
+    }
+  ],
+  "manual_checks": [
+    {
+      "row_label": "United States, with outlying possessions",
+      "column": "area",
+      "read_value": "United States, with outlying possessions",
+      "note": "굵은 글씨 합계 행, 뒤는 점선",
+      "result": "match",
+      "csv_value": "United States, with outlying possessions",
+      "csv_footnote": null,
+      "row_no": 1,
+      "bbox": [
+        93,
+        119,
+        515,
+        142
+      ],
+      "ocr_raw": "United States, with outlying possessions",
+      "crop": "crops/r01_area.png"
+    },
+    {
+      "row_label": "United States, with outlying possessions",
+      "column": "gross_area_sq_mi",
+      "read_value": "3,743,306",
+      "note": "굵은 글씨. 첫 자리 3",
+      "result": "match",
+      "csv_value": "3,743,306",
+      "csv_footnote": null,
+      "row_no": 1,
+      "bbox": [
+        727,
+        118,
+        833,
+        142
+      ],
+      "ocr_raw": "3,743,306",
+      "crop": "crops/r01_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "United States, with outlying possessions",
+      "column": "population_1910",
+      "read_value": "101,115,487",
+      "note": "원본은 쉼표 뒤 공백 있음",
+      "result": "match",
+      "csv_value": "101,115,487",
+      "csv_footnote": null,
+      "row_no": 1,
+      "bbox": [
+        909,
+        118,
+        1033,
+        144
+      ],
+      "ocr_raw": "101, 115, 487",
+      "crop": "crops/r01_population_1910.png"
+    },
+    {
+      "row_label": "Outlying possessions",
+      "column": "population_1910",
+      "read_value": "9,143,221",
+      "note": "",
+      "result": "match",
+      "csv_value": "9,143,221",
+      "csv_footnote": null,
+      "row_no": 3,
+      "bbox": [
+        929,
+        204,
+        1035,
+        235
+      ],
+      "ocr_raw": "9,143,221",
+      "crop": "crops/r03_population_1910.png"
+    },
+    {
+      "row_label": "Alaska",
+      "column": "area",
+      "read_value": "Alaska",
+      "note": "뒤 점선 리더 제거",
+      "result": "match",
+      "csv_value": "Alaska",
+      "csv_footnote": null,
+      "row_no": 4,
+      "bbox": [
+        69,
+        251,
+        149,
+        275
+      ],
+      "ocr_raw": "Alaska.",
+      "crop": "crops/r04_area.png"
+    },
+    {
+      "row_label": "Alaska",
+      "column": "gross_area_sq_mi",
+      "read_value": "590,884",
+      "note": "",
+      "result": "match",
+      "csv_value": "590,884",
+      "csv_footnote": null,
+      "row_no": 4,
+      "bbox": [
+        749,
+        249,
+        835,
+        276
+      ],
+      "ocr_raw": "590,884",
+      "crop": "crops/r04_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "Alaska",
+      "column": "population_1910",
+      "read_value": "64,356",
+      "note": "",
+      "result": "match",
+      "csv_value": "64,356",
+      "csv_footnote": null,
+      "row_no": 4,
+      "bbox": [
+        963,
+        251,
+        1036,
+        276
+      ],
+      "ocr_raw": "64,356",
+      "crop": "crops/r04_population_1910.png"
+    },
+    {
+      "row_label": "Hawaii",
+      "column": "gross_area_sq_mi",
+      "read_value": "6,449",
+      "note": "",
+      "result": "match",
+      "csv_value": "6,449",
+      "csv_footnote": null,
+      "row_no": 5,
+      "bbox": [
+        769,
+        271,
+        835,
+        300
+      ],
+      "ocr_raw": "6,449",
+      "crop": "crops/r05_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "Porto Rico",
+      "column": "population_1910",
+      "read_value": "1,118,012",
+      "note": "행 이름은 원본 철자 Porto Rico",
+      "result": "match",
+      "csv_value": "1,118,012",
+      "csv_footnote": null,
+      "row_no": 6,
+      "bbox": [
+        930,
+        297,
+        1035,
+        321
+      ],
+      "ocr_raw": "1,118,012",
+      "crop": "crops/r06_population_1910.png"
+    },
+    {
+      "row_label": "Military and naval service abroad",
+      "column": "area",
+      "read_value": "Military and naval service abroad",
+      "note": "",
+      "result": "match",
+      "csv_value": "Military and naval service abroad",
+      "csv_footnote": null,
+      "row_no": 7,
+      "bbox": [
+        69,
+        319,
+        424,
+        342
+      ],
+      "ocr_raw": "Military and naval service abroad",
+      "crop": "crops/r07_area.png"
+    },
+    {
+      "row_label": "Military and naval service abroad",
+      "column": "gross_area_sq_mi",
+      "read_value": "",
+      "note": "원본 칸에 점선만 있고 숫자 없음. 공란으로 유지(0으로 채우지 않음)",
+      "result": "match",
+      "csv_value": "",
+      "csv_footnote": null,
+      "row_no": 7,
+      "bbox": [
+        670,
+        319,
+        856,
+        343
+      ],
+      "ocr_raw": null,
+      "crop": "crops/r07_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "Philippine Islands",
+      "column": "gross_area_sq_mi",
+      "read_value": "115,026",
+      "note": "",
+      "result": "match",
+      "csv_value": "115,026",
+      "csv_footnote": null,
+      "row_no": 8,
+      "bbox": [
+        748,
+        338,
+        834,
+        366
+      ],
+      "ocr_raw": "115,026",
+      "crop": "crops/r08_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "Philippine Islands",
+      "column": "population_1910",
+      "read_value": "7,635,426",
+      "read_footnote": "1",
+      "note": "숫자 앞 작은 위첨자 1 = 각주 'Population in 1903.'",
+      "result": "match",
+      "csv_value": "7,635,426",
+      "csv_footnote": "1",
+      "row_no": 8,
+      "bbox": [
+        921,
+        340,
+        1035,
+        365
+      ],
+      "ocr_raw": "17,635,426",
+      "crop": "crops/r08_population_1910.png"
+    },
+    {
+      "row_label": "Panama Canal Zone",
+      "column": "gross_area_sq_mi",
+      "read_value": "436",
+      "note": "",
+      "result": "match",
+      "csv_value": "436",
+      "csv_footnote": null,
+      "row_no": 9,
+      "bbox": [
+        793,
+        362,
+        834,
+        386
+      ],
+      "ocr_raw": "436",
+      "crop": "crops/r09_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "Panama Canal Zone",
+      "column": "population_1910",
+      "read_value": "62,810",
+      "read_footnote": "2",
+      "note": "숫자 앞 작은 위첨자 2 = 각주 'Population in 1912.'",
+      "result": "match",
+      "csv_value": "62,810",
+      "csv_footnote": "2",
+      "row_no": 9,
+      "bbox": [
+        952,
+        363,
+        1035,
+        388
+      ],
+      "ocr_raw": "262,810",
+      "crop": "crops/r09_population_1910.png"
+    },
+    {
+      "row_label": "Samoa (population estimated)",
+      "column": "area",
+      "read_value": "Samoa (population estimated)",
+      "note": "",
+      "result": "match",
+      "csv_value": "Samoa (population estimated)",
+      "csv_footnote": null,
+      "row_no": 11,
+      "bbox": [
+        69,
+        408,
+        383,
+        432
+      ],
+      "ocr_raw": "Samoa (population estimated)",
+      "crop": "crops/r11_area.png"
+    },
+    {
+      "row_label": "Samoa (population estimated)",
+      "column": "gross_area_sq_mi",
+      "read_value": "77",
+      "note": "",
+      "result": "match",
+      "csv_value": "77",
+      "csv_footnote": null,
+      "row_no": 11,
+      "bbox": [
+        802,
+        406,
+        834,
+        431
+      ],
+      "ocr_raw": "77",
+      "crop": "crops/r11_gross_area_sq_mi.png"
+    },
+    {
+      "row_label": "Samoa (population estimated)",
+      "column": "population_1910",
+      "read_value": "6,100",
+      "note": "",
+      "result": "match",
+      "csv_value": "6,100",
+      "csv_footnote": null,
+      "row_no": 11,
+      "bbox": [
+        971,
+        406,
+        1036,
+        435
+      ],
+      "ocr_raw": "6,100",
+      "crop": "crops/r11_population_1910.png"
+    }
+  ],
+  "needs_review": []
+}

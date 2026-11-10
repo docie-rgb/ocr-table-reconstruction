@@ -1,0 +1,34 @@
+﻿row_no,row_label,column,column_header,value,footnote,status,ocr_raw,ocr_score,bbox,ocr_item_ids,arith_check,manual_check,notes
+1,"United States, with outlying possessions",area,AREA.,"United States, with outlying possessions",,OK,"United States, with outlying possessions",0.9993,"[93, 119, 515, 142]",[7],n/a,match,
+1,"United States, with outlying possessions",gross_area_sq_mi,Gross area (land and water) in square miles.,"3,743,306",,OK,"3,743,306",0.9965,"[727, 118, 833, 142]",[8],pass,match,
+1,"United States, with outlying possessions",population_1910,Population: 1910,"101,115,487",,NORMALIZED,"101, 115, 487",0.9624,"[909, 118, 1033, 144]",[9],pass,match,whitespace removed inside number
+2,"United States, exclusive of outlying possessions",area,AREA.,"United States, exclusive of outlying possessions",,NORMALIZED,"United States, exclusive of outlying possessions.",0.9995,"[28, 163, 543, 186]",[10],n/a,not_checked,trailing dot-leader removed
+2,"United States, exclusive of outlying possessions",gross_area_sq_mi,Gross area (land and water) in square miles.,"3,026,789",,OK,"3,026,789",0.9997,"[726, 161, 833, 188]",[11],pass,not_checked,
+2,"United States, exclusive of outlying possessions",population_1910,Population: 1910,"91,972,266",,NORMALIZED,"91, 972,266",0.9638,"[922, 163, 1034, 187]",[12],pass,not_checked,whitespace removed inside number
+3,Outlying possessions,area,AREA.,Outlying possessions,,NORMALIZED,Outlying possessions.,0.9993,"[27, 208, 246, 232]",[13],n/a,not_checked,trailing dot-leader removed
+3,Outlying possessions,gross_area_sq_mi,Gross area (land and water) in square miles.,"716,517",,OK,"716,517",0.9999,"[747, 203, 834, 235]",[14],pass,not_checked,
+3,Outlying possessions,population_1910,Population: 1910,"9,143,221",,OK,"9,143,221",0.9998,"[929, 204, 1035, 235]",[15],pass,match,
+4,Alaska,area,AREA.,Alaska,,NORMALIZED,Alaska.,0.9991,"[69, 251, 149, 275]",[16],n/a,match,trailing dot-leader removed
+4,Alaska,gross_area_sq_mi,Gross area (land and water) in square miles.,"590,884",,OK,"590,884",1.0,"[749, 249, 835, 276]",[17],pass,match,
+4,Alaska,population_1910,Population: 1910,"64,356",,OK,"64,356",0.9999,"[963, 251, 1036, 276]",[18],pass,match,
+5,Hawaii,area,AREA.,Hawaii,,NORMALIZED,Hawaii.,0.9359,"[68, 273, 152, 298]",[19],n/a,not_checked,trailing dot-leader removed
+5,Hawaii,gross_area_sq_mi,Gross area (land and water) in square miles.,"6,449",,OK,"6,449",0.9992,"[769, 271, 835, 300]",[20],pass,match,
+5,Hawaii,population_1910,Population: 1910,"191,909",,OK,"191,909",0.9998,"[952, 274, 1035, 299]",[21],pass,not_checked,
+6,Porto Rico,area,AREA.,Porto Rico,,NORMALIZED,Porto Rico.,0.9988,"[69, 296, 189, 320]",[22],n/a,not_checked,trailing dot-leader removed
+6,Porto Rico,gross_area_sq_mi,Gross area (land and water) in square miles.,"3,435",,OK,"3,435",0.9965,"[769, 294, 837, 323]",[23],pass,not_checked,
+6,Porto Rico,population_1910,Population: 1910,"1,118,012",,OK,"1,118,012",0.9998,"[930, 297, 1035, 321]",[24],pass,match,
+7,Military and naval service abroad,area,AREA.,Military and naval service abroad,,OK,Military and naval service abroad,0.9996,"[69, 319, 424, 342]",[25],n/a,match,
+7,Military and naval service abroad,gross_area_sq_mi,Gross area (land and water) in square miles.,,,BLANK,,,"[670, 319, 856, 343]",[],n/a,match,no OCR text inside this cell region
+7,Military and naval service abroad,population_1910,Population: 1910,"55,608",,OK,"55,608",0.9994,"[962, 319, 1034, 343]",[26],pass,not_checked,
+8,Philippine Islands,area,AREA.,Philippine Islands,,NORMALIZED,Philippine Islands.,0.9828,"[69, 340, 274, 365]",[27],n/a,not_checked,trailing dot-leader removed
+8,Philippine Islands,gross_area_sq_mi,Gross area (land and water) in square miles.,"115,026",,OK,"115,026",0.9998,"[748, 338, 834, 366]",[28],pass,match,
+8,Philippine Islands,population_1910,Population: 1910,"7,635,426",1,CORRECTED,"17,635,426",0.9885,"[921, 340, 1035, 365]",[29],pass,match,leading '1' is a raised superscript -> footnote 1
+9,Panama Canal Zone,area,AREA.,Panama Canal Zone,,OK,Panama Canal Zone,0.9918,"[70, 365, 281, 386]",[30],n/a,not_checked,
+9,Panama Canal Zone,gross_area_sq_mi,Gross area (land and water) in square miles.,436,,OK,436,1.0,"[793, 362, 834, 386]",[31],pass,match,
+9,Panama Canal Zone,population_1910,Population: 1910,"62,810",2,CORRECTED,"262,810",0.9448,"[952, 363, 1035, 388]",[32],pass,match,leading '2' is a raised superscript -> footnote 2
+10,Guam (population estimated),area,AREA.,Guam (population estimated),,OK,Guam (population estimated),0.9973,"[69, 385, 377, 409]",[33],n/a,not_checked,
+10,Guam (population estimated),gross_area_sq_mi,Gross area (land and water) in square miles.,210,,OK,210,1.0,"[792, 385, 833, 408]",[34],pass,not_checked,
+10,Guam (population estimated),population_1910,Population: 1910,"9,000",,OK,"9,000",0.9999,"[971, 386, 1034, 410]",[35],pass,not_checked,
+11,Samoa (population estimated),area,AREA.,Samoa (population estimated),,OK,Samoa (population estimated),0.9984,"[69, 408, 383, 432]",[36],n/a,match,
+11,Samoa (population estimated),gross_area_sq_mi,Gross area (land and water) in square miles.,77,,OK,77,1.0,"[802, 406, 834, 431]",[37],pass,match,
+11,Samoa (population estimated),population_1910,Population: 1910,"6,100",,OK,"6,100",0.9999,"[971, 406, 1036, 435]",[38],pass,match,

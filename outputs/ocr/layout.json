@@ -1,0 +1,159 @@
+{
+  "ruling_lines": {
+    "horizontal": [
+      9,
+      97,
+      153,
+      244,
+      456
+    ],
+    "vertical": [
+      670,
+      856
+    ],
+    "vertical_border": [
+      3
+    ],
+    "image_size": [
+      1050,
+      505
+    ]
+  },
+  "columns_x": [
+    [
+      0,
+      670
+    ],
+    [
+      670,
+      856
+    ],
+    [
+      856,
+      1051
+    ]
+  ],
+  "header_bottom_y": 97,
+  "table_bottom_y": 456,
+  "rows": [
+    {
+      "row_no": 1,
+      "ocr_item_ids": [
+        7,
+        8,
+        9
+      ],
+      "y_center": 130.5
+    },
+    {
+      "row_no": 2,
+      "ocr_item_ids": [
+        10,
+        11,
+        12
+      ],
+      "y_center": 174.7
+    },
+    {
+      "row_no": 3,
+      "ocr_item_ids": [
+        13,
+        14,
+        15
+      ],
+      "y_center": 219.5
+    },
+    {
+      "row_no": 4,
+      "ocr_item_ids": [
+        16,
+        17,
+        18
+      ],
+      "y_center": 263.0
+    },
+    {
+      "row_no": 5,
+      "ocr_item_ids": [
+        19,
+        20,
+        21
+      ],
+      "y_center": 285.8
+    },
+    {
+      "row_no": 6,
+      "ocr_item_ids": [
+        22,
+        23,
+        24
+      ],
+      "y_center": 308.5
+    },
+    {
+      "row_no": 7,
+      "ocr_item_ids": [
+        25,
+        26
+      ],
+      "y_center": 330.8
+    },
+    {
+      "row_no": 8,
+      "ocr_item_ids": [
+        27,
+        28,
+        29
+      ],
+      "y_center": 352.3
+    },
+    {
+      "row_no": 9,
+      "ocr_item_ids": [
+        30,
+        31,
+        32
+      ],
+      "y_center": 375.0
+    },
+    {
+      "row_no": 10,
+      "ocr_item_ids": [
+        33,
+        34,
+        35
+      ],
+      "y_center": 397.2
+    },
+    {
+      "row_no": 11,
+      "ocr_item_ids": [
+        36,
+        37,
+        38
+      ],
+      "y_center": 419.7
+    }
+  ],
+  "header_item_ids": {
+    "area": [
+      4
+    ],
+    "gross_area_sq_mi": [
+      1,
+      2,
+      6
+    ],
+    "population_1910": [
+      3,
+      5
+    ]
+  },
+  "title_item_ids": [
+    0
+  ],
+  "footnote_item_ids": [
+    39,
+    40
+  ]
+}

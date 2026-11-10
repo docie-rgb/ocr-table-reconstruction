@@ -1,0 +1,39 @@
+{
+  "reviewer": "Claude (AI 코딩 보조, 과제 수행자 요청으로 판독). 사람 검토자가 아니므로 제출 전 과제 수행자가 동일 확대 이미지로 재확인할 것을 권장",
+  "method": "파이프라인이 원본 이미지 좌표(bbox)로 잘라 3배 확대한 셀 이미지(outputs/ocr/crops/)와 원본 전체 이미지를 눈으로 읽고, 읽은 값을 이 파일에 입력. 파이프라인이 CSV 값과 자동 비교함. OCR 결과를 보고 옮겨 적지 않고 이미지 글자를 기준으로 판독함",
+  "date": "2026-11-10",
+  "human_review": {
+    "status": "pending",
+    "reviewer": null,
+    "date": null,
+    "instructions": "사람 검토자가 각 crop 이미지를 보고 human_read_value에 읽은 값을, human_result에 '일치' 또는 '불일치'를 적고 status/reviewer/date를 채운다. 채우기 전에는 사람 검증으로 기록하지 않는다.",
+    "cells": [
+      {"row_label": "Philippine Islands", "column": "population_1910", "reason": "OCR 수정 셀", "what_to_check": "숫자 앞 '1'이 본문 숫자보다 작고 위로 올라간 위첨자인지, 그 뒤 숫자가 7,635,426인지", "human_read_value": null, "human_result": null},
+      {"row_label": "Panama Canal Zone", "column": "population_1910", "reason": "OCR 수정 셀", "what_to_check": "숫자 앞 '2'가 위첨자인지, 그 뒤 숫자가 62,810인지", "human_read_value": null, "human_result": null},
+      {"row_label": "United States, with outlying possessions", "column": "gross_area_sq_mi", "reason": "굵은 글씨 합계, 첫 자리가 3/8로 헷갈릴 수 있음", "what_to_check": "3,743,306인지 (첫 자리 3)", "human_read_value": null, "human_result": null},
+      {"row_label": "United States, exclusive of outlying possessions", "column": "population_1910", "reason": "AI 대조 안 함, OCR이 공백을 넣어 읽어 정규화한 셀", "what_to_check": "91,972,266인지", "human_read_value": null, "human_result": null},
+      {"row_label": "Military and naval service abroad", "column": "gross_area_sq_mi", "reason": "공란으로 남긴 셀", "what_to_check": "칸에 숫자 없이 점선만 있는지", "human_read_value": null, "human_result": null},
+      {"row_label": "Guam (population estimated)", "column": "gross_area_sq_mi", "reason": "AI 대조 안 함, '2'로 시작하지만 위첨자 아님으로 판정된 셀", "what_to_check": "210인지, 앞의 2가 일반 크기 숫자인지", "human_read_value": null, "human_result": null}
+    ]
+  },
+  "checks": [
+    {"row_label": "United States, with outlying possessions", "column": "area", "read_value": "United States, with outlying possessions", "note": "굵은 글씨 합계 행, 뒤는 점선"},
+    {"row_label": "United States, with outlying possessions", "column": "gross_area_sq_mi", "read_value": "3,743,306", "note": "굵은 글씨. 첫 자리 3"},
+    {"row_label": "United States, with outlying possessions", "column": "population_1910", "read_value": "101,115,487", "note": "원본은 쉼표 뒤 공백 있음"},
+    {"row_label": "Outlying possessions", "column": "population_1910", "read_value": "9,143,221", "note": ""},
+    {"row_label": "Alaska", "column": "area", "read_value": "Alaska", "note": "뒤 점선 리더 제거"},
+    {"row_label": "Alaska", "column": "gross_area_sq_mi", "read_value": "590,884", "note": ""},
+    {"row_label": "Alaska", "column": "population_1910", "read_value": "64,356", "note": ""},
+    {"row_label": "Hawaii", "column": "gross_area_sq_mi", "read_value": "6,449", "note": ""},
+    {"row_label": "Porto Rico", "column": "population_1910", "read_value": "1,118,012", "note": "행 이름은 원본 철자 Porto Rico"},
+    {"row_label": "Military and naval service abroad", "column": "area", "read_value": "Military and naval service abroad", "note": ""},
+    {"row_label": "Military and naval service abroad", "column": "gross_area_sq_mi", "read_value": "", "note": "원본 칸에 점선만 있고 숫자 없음. 공란으로 유지(0으로 채우지 않음)"},
+    {"row_label": "Philippine Islands", "column": "gross_area_sq_mi", "read_value": "115,026", "note": ""},
+    {"row_label": "Philippine Islands", "column": "population_1910", "read_value": "7,635,426", "read_footnote": "1", "note": "숫자 앞 작은 위첨자 1 = 각주 'Population in 1903.'"},
+    {"row_label": "Panama Canal Zone", "column": "gross_area_sq_mi", "read_value": "436", "note": ""},
+    {"row_label": "Panama Canal Zone", "column": "population_1910", "read_value": "62,810", "read_footnote": "2", "note": "숫자 앞 작은 위첨자 2 = 각주 'Population in 1912.'"},
+    {"row_label": "Samoa (population estimated)", "column": "area", "read_value": "Samoa (population estimated)", "note": ""},
+    {"row_label": "Samoa (population estimated)", "column": "gross_area_sq_mi", "read_value": "77", "note": ""},
+    {"row_label": "Samoa (population estimated)", "column": "population_1910", "read_value": "6,100", "note": ""}
+  ]
+}

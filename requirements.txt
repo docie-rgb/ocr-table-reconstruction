@@ -1,0 +1,8 @@
+# Versions actually used for the recorded run (see outputs/ocr/manifest.json).
+# paddlepaddle from PyPI is the CPU build.
+paddlepaddle==3.3.1
+paddleocr==3.7.0
+paddlex==3.7.2
+opencv-contrib-python==4.10.0.84
+numpy==2.3.5
+Pillow==13.0.0
